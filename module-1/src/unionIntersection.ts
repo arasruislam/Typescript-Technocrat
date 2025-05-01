@@ -21,16 +21,20 @@
       bloodGroup: "A+",
    };
 
-
    // Intersection types
    type FrontendDeveloper = {
       skills: string[];
       designation: "frontend developer";
-   }
+   };
    type BackendDeveloper = {
       skills: string[];
-      designation: "backend developer";
-   }
+      designation2: "backend developer";
+   };
    type FullstackDeveloper = FrontendDeveloper & BackendDeveloper;
-   
+
+   const fullstackDeveloper: FullstackDeveloper = {
+      skills: ["HTML", "CSS", "JS"],
+      designation: "frontend developer",
+      designation2: "backend developer",
+   };
 }
