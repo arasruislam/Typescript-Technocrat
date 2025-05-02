@@ -1,12 +1,13 @@
 {
+   // Type Aliases
    type Student = {
       name: string;
       age: number;
       isActive: boolean;
       address: string;
       roll: number;
-   }
-   // Type Aliases
+   };
+
    const student1: Student = {
       name: "John Doe",
       age: 20,
@@ -23,9 +24,8 @@
       roll: 2,
    };
 
-   
    type Add = (a: number, b: number) => number;
    const add: Add = (a, b) => {
       return a + b;
-   }
+   };
 }
