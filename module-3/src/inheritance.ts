@@ -1,5 +1,5 @@
 {
-   class Student {
+   class Person {
       name: string;
       age: number;
       address: string;
@@ -14,10 +14,14 @@
          console.log(`${this.name} will sleep for ${numOfHours}`);
       }
    }
-   class Teacher {
-      name: string;
-      age: number;
-      address: string;
+
+   class Student extends Person {
+      constructor(name: string, age: number, address: string) {
+         super(name, age, address);
+      }
+   }
+
+   class Teacher extends Person {
       designation: string;
 
       constructor(
@@ -26,15 +30,10 @@
          address: string,
          designation: string
       ) {
-         this.address = address;
-         this.age = age;
-         this.name = name;
-         this.designation = designation;
+         super(name, age, address);
+         this.designation = designation
       }
 
-      getSleep(numOfHours: number) {
-         console.log(`${this.name} will sleep for ${numOfHours}`);
-      }
       takeClass(numOfClass: number) {
          console.log(`${this.name} will take ${numOfClass}`);
       }
